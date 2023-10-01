@@ -1,0 +1,35 @@
+module com.example.project {
+    requires java.desktop;
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires java.sql;
+    requires org.hibernate.orm.core;
+    requires java.persistence;
+    requires java.naming;
+    requires org.apache.poi.ooxml;
+    opens com.example.project.database.entities to org.hibernate.orm.core;
+    opens com.example.project to javafx.fxml;
+    exports com.example.project;
+    exports com.example.project.gui11;
+    opens com.example.project.gui11 to javafx.fxml;
+    exports com.example.project.gui21;
+    opens com.example.project.gui21 to javafx.fxml;
+    exports com.example.project.gui32;
+    opens com.example.project.gui32 to javafx.fxml;
+    exports com.example.project.gui51;
+    opens com.example.project.gui51 to javafx.fxml;
+    exports com.example.project.gui61;
+    opens com.example.project.gui61 to javafx.fxml;
+    exports com.example.project.popup;
+    opens com.example.project.popup to javafx.fxml;
+    exports com.example.project.gui62;
+    opens com.example.project.gui62 to javafx.fxml;
+    exports com.example.project.gui63;
+    opens com.example.project.gui63 to javafx.fxml;
+    exports com.example.project.gui71;
+    opens com.example.project.gui71 to javafx.fxml;
+    exports com.example.project.gui65;
+    opens com.example.project.gui65 to javafx.fxml;
+    exports com.example.project.gui74;
+    opens com.example.project.gui74 to javafx.fxml;
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #FFFFF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.HelloController">
+    <children>
+        <Pane prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #3399FF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+        <Pane layoutX="6.0" layoutY="54.0" prefHeight="113.0" prefWidth="787.0" style="-fx-background-color: #fffff; -fx-border-style: solid; -fx-border-color: #C0C0C0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Label layoutX="14.0" text="IT" textFill="#e40b0b">
+                    <font>
+                        <Font size="34.0" />
+                    </font>
+                </Label>
+                <Button layoutX="587.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchToScene2" text="Button" />
+            </children>
+        </Pane>
+        <TabPane layoutX="6.0" layoutY="174.0" prefHeight="530.0" prefWidth="787.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="7.0">
+            <tabs>
+                <Tab text="Questions">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="27.0" layoutY="22.0" prefHeight="50.0" prefWidth="228.0" text="Question Bank" textFill="#ea1717">
+                                    <font>
+                                        <Font size="23.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="27.0" layoutY="72.0" prefHeight="30.0" prefWidth="138.0" text="Select a category : " />
+                                <ChoiceBox layoutX="165.0" layoutY="75.0" prefHeight="28.0" prefWidth="178.0" />
+                                <CheckBox layoutX="27.0" layoutY="143.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="293.0" text="Also show question from subcategories" />
+                                <Label layoutX="27.0" layoutY="117.0" prefHeight="18.0" prefWidth="337.0" text="The default category for question shared in context" />
+                                <CheckBox layoutX="27.0" layoutY="169.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="293.0" text="Also show old questions" />
+                                <Button layoutX="33.0" layoutY="205.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="216.0" text="CREAT A NEW QUESTION" />
+                                <StackPane layoutX="9.0" layoutY="249.0" prefHeight="216.0" prefWidth="772.0">
+                                    <children>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ScrollPane prefHeight="218.0" prefWidth="766.0">
+                                                    <content>
+                                                        <TableView prefHeight="210.0" prefWidth="766.0">
+                                                            <columns>
+                                                                <TableColumn prefWidth="692.0000122189522" text="Question Name/ ID name" />
+                                                                <TableColumn minWidth="0.0" prefWidth="64.80001831054688" text="Edit" />
+                                                            </columns>
+                                                        </TableView>
+                                                    </content>
+                                                </ScrollPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </StackPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Categories">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TitledPane animated="false" prefHeight="474.0" prefWidth="787.0" text="Add categoris" textFill="#dc0909">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <Label layoutX="26.0" layoutY="29.0" text="Parent Category" />
+                                                <Label layoutX="26.0" layoutY="70.0" prefHeight="30.0" prefWidth="36.0" text="Name" />
+                                                <Label layoutX="30.0" layoutY="336.0" text="ID Name" />
+                                                <TextField layoutX="208.0" layoutY="72.0" prefHeight="26.0" prefWidth="347.0" style="-fx-background-color: #FFFFF; -fx-border-color: #C0C0C0; -fx-border-style: solid;" />
+                                                <ChoiceBox layoutX="208.0" layoutY="26.0" prefHeight="28.0" prefWidth="288.0" />
+                                                <Label layoutX="30.0" layoutY="135.0" text="Category info" />
+                                                <Pane layoutX="208.0" layoutY="135.0" prefHeight="174.0" prefWidth="452.0" style="-fx-border-style: solid; -fx-border-color: #C0C0C0;" />
+                                                <TextField layoutX="208.0" layoutY="332.0" prefHeight="26.0" prefWidth="305.0" style="-fx-background-color: #FFFFF; -fx-border-color: #C0C0C0; -fx-border-style: solid;" />
+                                                <Button layoutX="319.0" layoutY="390.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="237.0" style="-fx-background-color: #FF0000;" text="ADD CATEGORY" textFill="#fcfcfc" />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Import">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+                <Tab text="Export">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
